@@ -32,7 +32,6 @@ if test -d deb/usr/lib64 ; then
 fi
 
 # init directories
-mv deb/etc/init.d/xend deb/debian/xen-4.2-mini.xend.init
 mv deb/etc/init.d/xencommons deb/debian/xen-4.2-mini.xencommons.init
 mv deb/etc/init.d/xen-watchdog deb/debian/xen-4.2-mini.xen-watchdog.init
 
