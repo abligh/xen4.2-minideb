@@ -770,10 +770,6 @@ int libxl_domain_suspend(libxl_ctx *ctx, uint32_t domid, int fd, int flags,
     if (type == LIBXL_DOMAIN_TYPE_HVM && flags & LIBXL_SUSPEND_LIVE) {
         switch (libxl__device_model_version_running(gc, domid)) {
         case LIBXL_DEVICE_MODEL_VERSION_QEMU_XEN:
-            LOG(ERROR,
-                "cannot live migrate HVM domains with qemu-xen device-model");
-            rc = ERROR_FAIL;
-            goto out_err;
         case LIBXL_DEVICE_MODEL_VERSION_QEMU_XEN_TRADITIONAL:
             /* No problem */
             break;
